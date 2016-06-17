@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:descendantFocusability="blocksDescendants">
+
+    <LinearLayout android:id="@+id/hideRelayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_config"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="配置url"
+            android:textSize="20sp" />
+
+	    <Button
+	        android:id="@+id/btn_refresh"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="刷新页面"
+	        android:textSize="20sp" />
+	    <Button
+	        android:id="@+id/btn_exit"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="退出"
+	        android:textSize="20sp" />
+
+	    <Button
+	        android:id="@+id/btn_test"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="测试"
+	        android:textSize="20sp"
+	        android:onClick="ToTestActivity" />
+
+    </LinearLayout>
+    <WebView 
+        android:id="@+id/wv_display" 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+</LinearLayout>
