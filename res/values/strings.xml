@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, HISQueueDisplayActivity!</string>
+    <string name="app_name">HISQueueDisplay</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_wifi_switch">WifiSwitchActivity</string>
+
+</resources>
