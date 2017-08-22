@@ -74,11 +74,8 @@ public class TestActivity extends Activity {
 		} else {
 			if (netinfo.getType() == ConnectivityManager.TYPE_WIFI) {
 				if (netinfo.isConnected()) {
-<<<<<<< HEAD
+
 					return "正在使用wifi网络\nSSID:"+ netinfo.getExtraInfo();
-=======
-					return "正在使用wifi网络\n";
->>>>>>> 732f90e9c4e6436c2e9835c4741933de66c1597a
 				}
 			} else if (netinfo.getType() == ConnectivityManager.TYPE_MOBILE) {
 				String s = "正在使用运营商网络\n";
