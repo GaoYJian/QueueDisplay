@@ -6,6 +6,9 @@
     <string name="title_activity_test">TestActivity</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+<<<<<<< HEAD
     <string name="title_activity_wifi_switch">WifiSwitchActivity</string>
+=======
+>>>>>>> 732f90e9c4e6436c2e9835c4741933de66c1597a
 
 </resources>

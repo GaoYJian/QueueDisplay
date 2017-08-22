@@ -55,11 +55,19 @@ public class HISQueueDisplayActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
+<<<<<<< HEAD
 		int a = (6 >>> 9);
 		webView = (WebView) findViewById(R.id.wv_display);
 		configBtn = (Button) findViewById(R.id.btn_config);
 		configBtn.setOnClickListener(new View.OnClickListener() {
 
+=======
+		int a = (6>>>9);
+		webView = (WebView) findViewById(R.id.wv_display);
+		configBtn = (Button) findViewById(R.id.btn_config);
+		configBtn.setOnClickListener(new View.OnClickListener() {
+        
+>>>>>>> 732f90e9c4e6436c2e9835c4741933de66c1597a
 			public void onClick(View v) {
 
 				Intent intent = new Intent();
@@ -70,7 +78,10 @@ public class HISQueueDisplayActivity extends Activity {
 			}
 		});
 		hideLayout = (LinearLayout) findViewById(R.id.hideRelayout);
+<<<<<<< HEAD
 		showConfigLayout();
+=======
+>>>>>>> 732f90e9c4e6436c2e9835c4741933de66c1597a
 		webView.setOnTouchListener(new View.OnTouchListener() {
 
 			public boolean onTouch(View v, MotionEvent event) {
@@ -80,7 +91,11 @@ public class HISQueueDisplayActivity extends Activity {
 			}
 		});
 		webView.addJavascriptInterface(this, "androidCallback");// (obj,
+<<<<<<< HEAD
 		//webView.getSettings().setJavaScriptEnabled(true);												// "runOnAndroidJavaScript")
+=======
+																// "runOnAndroidJavaScript")
+>>>>>>> 732f90e9c4e6436c2e9835c4741933de66c1597a
 		exitBtn = (Button) findViewById(R.id.btn_exit);
 		exitBtn.setOnClickListener(new View.OnClickListener() {
 
@@ -103,6 +118,7 @@ public class HISQueueDisplayActivity extends Activity {
 		SharedPreferences sp = getSharedPreferences("userInfo",
 				Context.MODE_WORLD_READABLE);
 		webUrl = sp.getString("DISPLAY_WEBSERVICE", "");
+<<<<<<< HEAD
 
 		if (webUrl.equals("")) {
 			Intent intent = new Intent();
@@ -116,6 +132,16 @@ public class HISQueueDisplayActivity extends Activity {
 			webView.loadUrl(webUrl);
 		}
 		/*
+=======
+		/*
+		 * if (webUrl.equals("")) { Intent intent = new Intent();
+		 * intent.setClass(HISQueueDisplayActivity.this,
+		 * DisplayConfigActivity.class); startActivity(intent);
+		 * HISQueueDisplayActivity.this.finish(); } else {
+		 * webView.getSettings().setJavaScriptEnabled(true);
+		 * webView.loadUrl(webUrl);
+		 * 
+>>>>>>> 732f90e9c4e6436c2e9835c4741933de66c1597a
 		 * // 设置网页展示窗口在App中，而不打开浏览器 webView.setWebViewClient(new WebViewClient()
 		 * { public boolean shouldOverrideUrlLoading(WebView view, String url) {
 		 * view.loadUrl(url); return true; } });
@@ -167,7 +193,29 @@ public class HISQueueDisplayActivity extends Activity {
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
 		if (keyCode == KeyEvent.KEYCODE_BACK) {
+<<<<<<< HEAD
 			exitActivity();
+=======
+			AlertDialog.Builder builder = new AlertDialog.Builder(this);
+			builder.setMessage("Are you sure you want to exit?")
+					.setCancelable(false)
+					.setPositiveButton("Yes",
+							new DialogInterface.OnClickListener() {
+								public void onClick(DialogInterface dialog,
+										int id) {
+									exitActivity();
+								}
+							})
+					.setNegativeButton("No",
+							new DialogInterface.OnClickListener() {
+								public void onClick(DialogInterface dialog,
+										int id) {
+									dialog.cancel();
+								}
+							});
+			AlertDialog alert = builder.create();
+			alert.show();
+>>>>>>> 732f90e9c4e6436c2e9835c4741933de66c1597a
 		}
 		return true;
 
@@ -179,7 +227,11 @@ public class HISQueueDisplayActivity extends Activity {
 
 	public void ToTestActivity(View view) {
 		Intent intent = new Intent();
+<<<<<<< HEAD
 		intent.setClass(HISQueueDisplayActivity.this, WifiSwitchActivity.class);
+=======
+		intent.setClass(HISQueueDisplayActivity.this, TestActivity.class);
+>>>>>>> 732f90e9c4e6436c2e9835c4741933de66c1597a
 		startActivity(intent);
 		HISQueueDisplayActivity.this.finish();
 	}
